@@ -1,0 +1,88 @@
+:root{
+    --bs-body-font-family: "Styrene B Thin Trial";
+    --bs-font-family-styrene-a: "Styrene A Regular Regular";
+    --bs-body-font-size: 15px;
+
+    --bs-heading-color: #231F20;
+    --bs-heading-font-weight: 700;
+
+    --bs-h2-font-size: 48px;
+    --bs-h4-font-size: 22px;
+    --bs-h6-font-size: 12px;
+
+    --bs-p-line-height: 20.25px;
+    --bs-h2-line-height: 57.6px;
+    --bs-h6-line-height: 18px;
+    --bs-h2-letter-spacing: 2px;
+    --bs-h4-letter-spacing: 1px;
+    --bs-h6-letter-spacing: 0;
+}
+
+@mixin transition{
+    transition:all 0.3s;
+}
+
+main{
+    min-height:1611px;
+    transform:scale(0.995);
+}
+
+p{
+    line-height:var(--bs-p-line-height);
+}
+
+// .h1, h1{
+//     font-size: var(--bs-font-size-h1);
+//     line-height: var(--line-height-h1);
+//     letter-spacing: var(--bs-letter-spacing-heading);
+// }
+.h2, h2{
+    font-size: var(--bs-h2-font-size);
+    font-weight: var(--bs-heading-font-weight);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--bs-h2-letter-spacing);
+}
+// .h3, h3{
+//     font-size: var(--bs-font-size-h3);
+//     line-height: var(--line-height-h3);
+//     letter-spacing: var(--bs-letter-spacing-heading);
+// }
+.h4, h4{
+    font-size: var(--bs-h4-font-size);
+    font-weight: var(--bs-heading-font-weight);
+    line-height: var(--line-height-h4);
+    letter-spacing: var(--bs-h4-letter-spacing);
+}
+// .h5, h5{
+//     font-size: var(--bs-font-size-h5);
+//     line-height: var(--line-height-h5);
+//     letter-spacing: var(--bs-letter-spacing-heading);
+// }
+.h6, h6{
+    font-size: var(--bs-h6-font-size);
+    font-weight: var(--bs-heading-font-weight);
+    line-height: var(--line-height-h6);
+    letter-spacing: var(--bs-h6-letter-spacing);
+}
+
+.nav{
+    .nav-link{
+        font-family: var(--bs-font-family-styrene-a);
+        letter-spacing: 1px;
+        padding-bottom:12px;
+        border-bottom:1px solid transparent;
+
+        &.active{
+            border-bottom-color: var(--bs-heading-color);
+
+            @include transition;
+        }
+    }
+}
+
+.card{
+    .card-footer{
+        background-color:#EDEDEE;
+
+    }
+}
